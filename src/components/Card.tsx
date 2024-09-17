@@ -7,8 +7,8 @@ interface Props {
 function Card(props: Props) {
   const { children } = props;
   return (
-    <div className="card" style={{ width: "350px" }}>
-      <div className="card-body">{children}</div>
+    <div className="Card" style={{ width: "350px" }}>
+      <div className="Card-body">{children}</div>
     </div>
   );
 }
