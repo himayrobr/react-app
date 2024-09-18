@@ -1,5 +1,10 @@
 import { ReactNode } from "react";
-import styles from "./Button.module.css"
+import styled from "styled-components";
+
+const Btn = styled.button`
+  background-color: red;
+  padding: 25px 30px;
+`;
 
 type Props = {
   children: ReactNode;
@@ -7,18 +12,17 @@ type Props = {
   onClick: () => void;
 };
 
-console.log(styles);
+
 function Button({ children, isLoading, onClick }: Props) {
   return (
-    <button
+    <Btn
       onClick={onClick}
       disabled={isLoading}
       type="button"
-      className={styles.button}
       // className={`btn btn-${isLoading ? "secondary" : "primary"}`}
     >
       {isLoading ? 'perate tantito carnal' :children}
-    </button>
+    </Btn>
   );
 }
 
